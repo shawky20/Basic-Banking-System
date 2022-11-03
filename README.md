@@ -1,2 +1,2 @@
 # Basic-Banking-System
-Basic Banking System using Angular, Spring boot and posteSQL
+Basic Banking System using Angular, Spring boot and PostgreSQL
