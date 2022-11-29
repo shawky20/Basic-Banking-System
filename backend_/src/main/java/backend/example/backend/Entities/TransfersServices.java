@@ -11,9 +11,7 @@ public class TransfersServices {
     TransfersRep transfersRep;
 
     public transfers transfer(transfers t){
-        customerServices.updateCustomer(
-                t.getToCustomer()
-        );
+        transfersRep.save(t);
         return t;
     }
 }

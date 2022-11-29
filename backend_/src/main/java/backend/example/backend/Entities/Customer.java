@@ -1,20 +1,24 @@
 package backend.example.backend.Entities;
 
 
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@Table(name = "customer")
-public class customer {
+@RequiredArgsConstructor(staticName = "of")
+@Table(name = "Customer")
+public class Customer {
     @Id
     @SequenceGenerator(
             name = "student_sequence",
             sequenceName = "student_sequence",
             allocationSize = 1
     )
-    @GeneratedValue(
+    @GeneratedValue( // 3shan mnb3tosh hwa yt3amel m3 nfso
             strategy = GenerationType.SEQUENCE,
             generator =  "student_sequence"
     )
@@ -30,7 +34,7 @@ public class customer {
     private List<transfers> toTransfers;
 
 
-    public customer(long id, String name, String email, long currentBalance) {
+    public Customer(long id, String name, String email, long currentBalance) {
         this.id = id;
         this.name = name;
         this.email = email;

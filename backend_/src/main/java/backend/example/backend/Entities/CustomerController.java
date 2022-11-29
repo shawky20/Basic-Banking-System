@@ -16,12 +16,18 @@ public class CustomerController {
     CustomerServices customerServices;
 
     @GetMapping("/all")
-    public List<customer> getAll(){
+    public List<Customer> getAll(){
         return customerServices.getAll();
     }
 
     @PostMapping("/update")
-    public customer update(customer c){
+    public Customer update(Customer c){
         return customerServices.updateCustomer(c);
+    }
+    @GetMapping("/add")
+    public Customer add(){
+        Customer customer = new Customer(1,"cust2","cust1@gail.com",1000);
+
+        return customerServices.addCustomer(customer);
     }
 }

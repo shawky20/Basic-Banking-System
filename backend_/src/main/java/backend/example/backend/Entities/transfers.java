@@ -20,11 +20,11 @@ public class transfers {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "from_customer_id")
-    private customer fromCustomer;
+    private Customer fromCustomer;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "to_customer_id")
-    private customer toCustomer;
+    private Customer toCustomer;
 
 
     public long getId() {
@@ -35,19 +35,19 @@ public class transfers {
         this.id = id;
     }
 
-    public customer getFromCustomer() {
+    public Customer getFromCustomer() {
         return fromCustomer;
     }
 
-    public void setFromCustomer(customer fromCustomer) {
+    public void setFromCustomer(Customer fromCustomer) {
         this.fromCustomer = fromCustomer;
     }
 
-    public customer getToCustomer() {
+    public Customer getToCustomer() {
         return toCustomer;
     }
 
-    public void setToCustomer(customer toCustomer) {
+    public void setToCustomer(Customer toCustomer) {
         this.toCustomer = toCustomer;
     }
 }
