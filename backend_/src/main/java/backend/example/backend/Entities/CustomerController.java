@@ -26,7 +26,7 @@ public class CustomerController {
     }
     @GetMapping("/add")
     public Customer add(){
-        Customer customer = new Customer(1,"cust2","cust1@gail.com",1000);
+        Customer customer = new Customer(3,"cust23","cust1@gail.com",1000);
 
         return customerServices.addCustomer(customer);
     }

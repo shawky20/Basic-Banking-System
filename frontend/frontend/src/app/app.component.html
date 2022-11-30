@@ -2,6 +2,31 @@
 <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Bancking System</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 <div  class="content">
     <div  class="container">
         <div class="row">
@@ -10,8 +35,8 @@
         </div>
         <!-- end row -->
         <div class="row">
-            <div class="col-lg-4">
-                <div *ngFor="let cust of customers" class="text-center card-box">
+            <div  class="col-lg-4">
+                <div class="column" *ngFor="let cust of customers" class="text-center card-box" style="display: grid; grid-auto-flow: column; grid-gap: 20px;width: 80%; ">
                     <div class="member-card pt-2 pb-2">
                         <div class="thumb-lg member-thumb mx-auto"><img src="https://bootdey.com/img/Content/avatar/avatar2.png" class="rounded-circle img-thumbnail" alt="profile-image"></div>
                         <div class="">
@@ -23,7 +48,7 @@
                             <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a></li>
                             <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Skype"><i class="fa fa-skype"></i></a></li>
                         </ul>
-                        <button type="button" class="btn btn-primary mt-3 btn-rounded waves-effect w-md waves-light">Transfer</button>
+                        <button type="button" class="btn btn-primary mt-3 btn-rounded waves-effect w-md waves-light" (click)="transferClicked(cust)">Transfer</button>
                         <div class="mt-4">
                             <div class="row">
                                 <div class="col-4">

@@ -6,6 +6,12 @@ body{
     display: flex;
     flex-direction: row;
 } */
+.column {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+  width: 80%;
+}
 .card-box {
     padding: 20px;
     border-radius: 20px;

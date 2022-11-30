@@ -12,7 +12,7 @@ public class TransfersController {
     @Autowired
     TransfersServices transfersServices;
 
-    @PostMapping()
+    @PostMapping("/add")
     public transfers transfer(transfers t ){
         return transfersServices.transfer(t);
     }
