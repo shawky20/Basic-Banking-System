@@ -1,6 +1,7 @@
-package backend.example.backend.Entities;
+package backend.example.backend.dao;
 
 
+import backend.example.backend.Entities.transfers;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,5 +1,8 @@
-package backend.example.backend.Entities;
+package backend.example.backend.service;
 
+import backend.example.backend.Entities.transfers;
+import backend.example.backend.dao.TransfersRep;
+import backend.example.backend.service.CustomerServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

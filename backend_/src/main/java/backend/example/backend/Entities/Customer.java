@@ -1,6 +1,7 @@
 package backend.example.backend.Entities;
 
 
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
@@ -9,7 +10,8 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@RequiredArgsConstructor(staticName = "of")
+@NoArgsConstructor(force = true)
+@AllArgsConstructor
 @Table(name = "Customer")
 public class Customer {
     @Id
@@ -22,7 +24,7 @@ public class Customer {
             strategy = GenerationType.SEQUENCE,
             generator =  "student_sequence"
     )
-    private long id;
+     long id;
     private String name;
     private String email;
     private  long currentBalance;
@@ -33,6 +35,8 @@ public class Customer {
     @OneToMany(mappedBy ="toCustomer")
     private List<transfers> toTransfers;
 
+//    public Customer() {
+//    }
 
     public Customer(long id, String name, String email, long currentBalance) {
         this.id = id;

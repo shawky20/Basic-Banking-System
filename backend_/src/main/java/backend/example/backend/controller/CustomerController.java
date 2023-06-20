@@ -1,11 +1,10 @@
-package backend.example.backend.Entities;
+package backend.example.backend.controller;
 
 
+import backend.example.backend.Entities.Customer;
+import backend.example.backend.service.CustomerServices;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,14 +19,16 @@ public class CustomerController {
         return customerServices.getAll();
     }
 
+    @GetMapping("/getById")
+    public Customer getCustomerById(@RequestParam Long id){
+       return customerServices.getById(id);
+    }
     @PostMapping("/update")
     public Customer update(Customer c){
         return customerServices.updateCustomer(c);
     }
-    @GetMapping("/add")
-    public Customer add(){
-        Customer customer = new Customer(3,"cust23","cust1@gail.com",1000);
-
+    @PostMapping("/add")
+    public Customer add(@RequestBody Customer customer){
         return customerServices.addCustomer(customer);
     }
 }

@@ -18,7 +18,7 @@ public class BackendApplication {
 	}
 
 	@Bean
-	public CorsFilter corsFilter() {
+	public CorsFilter corsFilter() {	// This is a bean that allows the front end to access the back end as they are on different ports (4200 and 8080) and this is a security measure
 		CorsConfiguration corsConfiguration = new CorsConfiguration();
 		corsConfiguration.setAllowCredentials(true);
 		corsConfiguration.setAllowedOrigins(Arrays.asList("http://localhost:4200"));
