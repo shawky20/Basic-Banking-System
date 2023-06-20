@@ -2,10 +2,10 @@ body{
     background:#8a1f1f;
     margin-top:20px;
 }
-/* .container{
+.container{
     display: flex;
-    flex-direction: row;
-} */
+    /* flex-direction: row; */
+}
 .column {
   display: grid;
   grid-auto-flow: column;

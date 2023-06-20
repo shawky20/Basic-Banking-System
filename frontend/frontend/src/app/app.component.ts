@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomerService } from './customer.service';
-import { TransferService } from './transfer.service';
+import { CustomerService } from './Services/customer_service';
+import { TransferService } from './Services/transfer.service';
 
 @Component({
   selector: "app-root",
@@ -8,7 +8,7 @@ import { TransferService } from './transfer.service';
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent implements OnInit {
-  title = "frontend";
+  title = "Basic Banking System";
   public customers: Customer[];
   private currentCustomer: Customer;
   private newTransfer: Transfer;
@@ -16,7 +16,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
      this.getCustmers();
-
 
   }
 
