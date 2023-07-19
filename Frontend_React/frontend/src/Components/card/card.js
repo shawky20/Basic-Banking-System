@@ -5,13 +5,13 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import "./card.css";
+import styles from "./card.module.css";
 
 
 export default function BasicCard(props) {
   return (
     // <div className="Card" > 
-    <Card sx={{ minWidth: 275 , maxWidth : 300 }} className="Card">
+    <Card sx={{ minWidth: 275 , maxWidth : 300 }} className={styles.Card}>
       <CardContent>
         <Typography sx={{ fontSize: 28 }} color="text.secondary" gutterBottom>
           {props.name}
