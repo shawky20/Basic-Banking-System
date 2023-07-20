@@ -11,16 +11,16 @@ function App() {
     // React.Fragment is a wrapper for multiple elements insted of using a div so that we don't have to use a div as it willl be considered as html element 
     <Fragment> 
       <div className="App">
-        <h1 style={myStyles}>Banking System</h1> {/* Inline CSS the first brackets are from JSX */}
-        <h1 style={{ color: "red", backgroundColor: "blue" }}>Banking System</h1> {/* Inline CSS */}
-        <div >
+         {/*<h1 style={myStyles}>Banking System</h1> Inline CSS the first brackets are from JSX */}
+         {/* <h1 style={{ color: "red", backgroundColor: "blue" }}>Banking System</h1>Inline CSS */}
+        {/* <div >
           {
             //* to loop through an array in JSX
             features.map((feature, index) => (
                <h1 key={index}>{feature}</h1>
             ))
           }
-        </div>
+        </div> */}
         <SearchAppBar/>
         <br/>
         <Dashboard/>
